@@ -1,5 +1,4 @@
 import React from "react";
-import AboutSection from "./components/AboutSection";
 
 // Import pages
 import AboutUs from "./pages/AboutUs";
@@ -7,7 +6,7 @@ import AboutUs from "./pages/AboutUs";
 function App() {
     return (
         <div className="App">
-            <AboutSection />
+            <AboutUs />
         </div>
     );
 }
