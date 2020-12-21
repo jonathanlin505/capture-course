@@ -10,33 +10,39 @@ import ContactUs from "./pages/ContactUs";
 import MovieDetail from "./pages/MovieDetail";
 
 // Router
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
+
+// Framer Motion Router
+import { AnimatePresence } from "framer-motion";
 
 // Import components
 import Nav from "./components/Nav";
 
 function App() {
+    const location = useLocation();
+
     return (
         <div className="App">
             <GlobalStyle />
             <Nav />
+            <AnimatePresence exitBeforeEnter>
+                <Switch location={location} key={location.pathname}>
+                    <Route path="/" exact>
+                        <AboutUs />
+                    </Route>
 
-            <Switch>
-                <Route path="/" exact>
-                    <AboutUs />
-                </Route>
+                    <Route path="/work" exact>
+                        <OurWork />
+                    </Route>
+                    <Route path="/work/:id">
+                        <MovieDetail />
+                    </Route>
 
-                <Route path="/work" exact>
-                    <OurWork />
-                </Route>
-                <Route path="/work/:id">
-                    <MovieDetail />
-                </Route>
-
-                <Route path="/contact">
-                    <ContactUs />
-                </Route>
-            </Switch>
+                    <Route path="/contact">
+                        <ContactUs />
+                    </Route>
+                </Switch>
+            </AnimatePresence>
         </div>
     );
 }
