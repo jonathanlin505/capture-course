@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Toggle from "./Toggle";
 
 // Import styles
@@ -11,7 +11,6 @@ import { scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
 
 const FaqSection = () => {
-    const [faqToggle, setFaqToggle] = useState(false);
     const [element, controls] = useScroll();
 
     return (

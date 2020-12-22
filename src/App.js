@@ -17,7 +17,6 @@ import { AnimatePresence } from "framer-motion";
 
 // Import components
 import Nav from "./components/Nav";
-import ScrollTop from "./components/ScrollTop";
 
 function App() {
     const location = useLocation();
