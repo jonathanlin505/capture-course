@@ -12,7 +12,7 @@ import styled from "styled-components";
 import { About, Description, Image } from "../styles";
 
 // Scroll Animation
-import { fade } from "../animation";
+import { scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
 
 const ServicesSection = () => {
@@ -23,7 +23,7 @@ const ServicesSection = () => {
             ref={element}
             animate={controls}
             initial="hidden"
-            variants={fade}
+            variants={scrollReveal}
         >
             <Description>
                 <h2>

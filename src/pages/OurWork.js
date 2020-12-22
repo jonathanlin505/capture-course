@@ -22,6 +22,8 @@ import {
 import TheRacer from "../components/TheRacer";
 import GoodTimes from "../components/GoodTimes";
 
+import ScrollTop from "../components/ScrollTop";
+
 const OurWork = () => {
     return (
         <Work
@@ -85,6 +87,8 @@ const OurWork = () => {
                     </Hide>
                 </Link>
             </Movie> */}
+
+            <ScrollTop />
         </Work>
     );
 };
@@ -124,7 +128,7 @@ const Hide = styled.div`
 const Frame1 = styled(motion.div)`
     position: fixed;
     left: 0;
-    top: 10%;
+    top: 0;
     width: 100%;
     height: 100vh;
     background: #fffedf;
