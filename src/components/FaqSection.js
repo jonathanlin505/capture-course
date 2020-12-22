@@ -5,6 +5,9 @@ import Toggle from "./Toggle";
 import styled from "styled-components";
 import { About } from "../styles";
 
+// Import Framer Motion
+import { AnimateSharedLayout } from "framer-motion";
+
 const FaqSection = () => {
     const [faqToggle, setFaqToggle] = useState(false);
 
@@ -14,9 +17,8 @@ const FaqSection = () => {
                 Any Questions? <span>FAQ</span>
             </h2>
 
-            <Toggle>
-                <div className="question">
-                    <h4>How do I start?</h4>
+            <AnimateSharedLayout>
+                <Toggle title="How do I start?">
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>
@@ -24,13 +26,9 @@ const FaqSection = () => {
                             elit. Possimus, expedita?
                         </p>
                     </div>
-                    <div className="faq-line"></div>
-                </div>
-            </Toggle>
+                </Toggle>
 
-            <Toggle>
-                <div className="question">
-                    <h4>Daily schedule</h4>
+                <Toggle title="Daily schedule">
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>
@@ -38,13 +36,9 @@ const FaqSection = () => {
                             elit. Possimus, expedita?
                         </p>
                     </div>
-                    <div className="faq-line"></div>
-                </div>{" "}
-            </Toggle>
+                </Toggle>
 
-            <Toggle>
-                <div className="question">
-                    <h4>Different payment methods</h4>
+                <Toggle title="Different payment methods">
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>
@@ -52,13 +46,9 @@ const FaqSection = () => {
                             elit. Possimus, expedita?
                         </p>
                     </div>
-                    <div className="faq-line"></div>
-                </div>{" "}
-            </Toggle>
+                </Toggle>
 
-            <Toggle>
-                <div className="question">
-                    <h4>What products do you offer?</h4>
+                <Toggle title="What products do you offer?">
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>
@@ -66,9 +56,8 @@ const FaqSection = () => {
                             elit. Possimus, expedita?
                         </p>
                     </div>
-                    <div className="faq-line"></div>
-                </div>{" "}
-            </Toggle>
+                </Toggle>
+            </AnimateSharedLayout>
         </Faq>
     );
 };
@@ -88,12 +77,12 @@ const Faq = styled(About)`
     .faq-line {
         background: #ccc;
         height: 0.2rem;
-        margin: 2rem 0rem;
+        margin: 3rem 0rem;
         width: 100%;
     }
 
     .question {
-        padding: 3rem 0rem;
+        padding: 3rem 0rem 0rem 0rem;
         cursor: pointer;
     }
 
