@@ -10,7 +10,7 @@ import athlete from "../img/athlete-small.png";
 // Animations
 import { motion } from "framer-motion";
 import {
-    pageAnimation,
+    pageAnimation2,
     fade,
     photoAnim,
     lineAnim,
@@ -27,7 +27,7 @@ import ScrollTop from "../components/ScrollTop";
 const OurWork = () => {
     return (
         <Work
-            variants={pageAnimation}
+            variants={pageAnimation2}
             initial="hidden"
             animate="show"
             exit="exit"
