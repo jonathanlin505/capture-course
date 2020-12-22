@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 // Images
 import athlete from "../img/athlete-small.png";
-import theracer from "../img/theracer-small.png";
-import goodtimes from "../img/goodtimes-small.png";
+// import theracer from "../img/theracer-small.png";
+// import goodtimes from "../img/goodtimes-small.png";
 
 // Animations
 import { motion } from "framer-motion";
@@ -17,6 +17,10 @@ import {
     slider,
     sliderContainer,
 } from "../animation";
+// import { useScroll } from "../components/useScroll";
+
+import TheRacer from "../components/TheRacer";
+import GoodTimes from "../components/GoodTimes";
 
 const OurWork = () => {
     return (
@@ -47,7 +51,13 @@ const OurWork = () => {
                 </Link>
             </Movie>
 
-            <Movie>
+            <TheRacer />
+            {/* <Movie
+                ref={element}
+                animate={controls}
+                initial="hidden"
+                variants={fade}
+            >
                 <motion.h2 variants={fade}>The Racer</motion.h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/the-racer">
@@ -59,9 +69,10 @@ const OurWork = () => {
                         />
                     </Hide>
                 </Link>
-            </Movie>
+            </Movie> */}
 
-            <Movie>
+            <GoodTimes />
+            {/* <Movie>
                 <motion.h2 variants={fade}>Good Times</motion.h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <Link to="/work/good-times">
@@ -73,7 +84,7 @@ const OurWork = () => {
                         />
                     </Hide>
                 </Link>
-            </Movie>
+            </Movie> */}
         </Work>
     );
 };
@@ -82,14 +93,14 @@ const Work = styled(motion.div)`
     min-height: 100vh;
     overflow: hidden;
     padding: 5rem 10rem;
-    background: white;
+    background: #fff;
 
     h2 {
         padding: 1rem 0rem;
     }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
     padding-bottom: 10rem;
 
     .line {
